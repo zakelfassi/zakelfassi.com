@@ -1,9 +1,9 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'zakelfassi.com – Ideas and learnings code x design x philosophy x entrepreneurship.',
+  title: 'Ideas and learnings code x design x philosophy',
   author: 'Zak El Fassi',
   headerTitle: 'zakelfassi.com',
-  description: 'ideas and learnings code x design x philosophy x entrepreneurship',
+  description: 'Ideas and learnings code x design x philosophy',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://zakelfassi.com',
