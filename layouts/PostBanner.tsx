@@ -18,7 +18,7 @@ interface LayoutProps {
 }
 
 export default function PostMinimal({ content, next, prev, children }: LayoutProps) {
-  const { slug, title, images, ig, threads, x, fb, reddit, pinterest } = content
+  const { slug, title, images, ig, threads, x, fb, reddit, pinterest, linkedin } = content
   const displayImage =
     images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
 
@@ -50,6 +50,7 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
                 fb={fb}
                 reddit={reddit}
                 pinterest={pinterest}
+                linkedin={linkedin}
               />
             </div>
           )}

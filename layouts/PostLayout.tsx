@@ -30,8 +30,22 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags, ig, bsky, threads, x, fb, reddit, pinterest } =
-    content
+  const {
+    filePath,
+    path,
+    slug,
+    date,
+    title,
+    tags,
+    ig,
+    bsky,
+    threads,
+    x, // Change this line from 'twitter' to 'x'
+    fb,
+    reddit,
+    pinterest,
+    linkedin,
+  } = content
   const basePath = path.split('/')[0]
 
   return (
@@ -105,6 +119,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     pinterest={pinterest}
                     threads={threads}
                     bsky={bsky}
+                    linkedin={linkedin}
                   />
                 </div>
               )}

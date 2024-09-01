@@ -17,7 +17,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title, ig, bsky, threads, x, fb, reddit, pinterest } = content
+  const { path, slug, date, title, ig, bsky, threads, x, fb, reddit, pinterest, linkedin } = content
 
   return (
     <SectionContainer>
@@ -54,6 +54,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                   reddit={reddit}
                   pinterest={pinterest}
                   bsky={bsky}
+                  linkedin={linkedin}
                 />
               </div>
             )}
