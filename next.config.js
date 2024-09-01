@@ -13,7 +13,7 @@ const ContentSecurityPolicy = `
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app
+  frame-src giscus.app youtube.com www.youtube.com
 `
 
 const securityHeaders = [
@@ -70,6 +70,14 @@ module.exports = () => {
         {
           protocol: 'https',
           hostname: 'picsum.photos',
+        },
+        {
+          protocol: 'https',
+          hostname: 'i.ytimg.com',
+        },
+        {
+          protocol: 'https',
+          hostname: 'img.youtube.com',
         },
       ],
     },
