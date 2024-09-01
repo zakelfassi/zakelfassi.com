@@ -52,14 +52,16 @@ export default function Home({ posts }) {
                         </div>
                         {images && images[0] && images[0].search('twitter-card') === -1 && (
                           <div className="my-4">
-                            <Image
-                              src={images[0]}
-                              alt={title}
-                              className="rounded-lg"
-                              layout="responsive"
-                              width={1200}
-                              height={900}
-                            />
+                            <Link href={`/blog/${slug}`}>
+                              <Image
+                                src={images[0]}
+                                alt={title}
+                                className="rounded-lg"
+                                layout="responsive"
+                                width={1200}
+                                height={900}
+                              />
+                            </Link>
                           </div>
                         )}
                         <div className="prose max-w-none text-gray-700 dark:text-gray-400">

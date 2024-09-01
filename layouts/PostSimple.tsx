@@ -8,6 +8,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import Image from 'next/image'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -17,7 +18,8 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title, ig, bsky, threads, x, fb, reddit, pinterest, linkedin } = content
+  const { path, slug, date, title, images, ig, bsky, threads, x, fb, reddit, pinterest, linkedin } =
+    content
 
   return (
     <SectionContainer>
@@ -26,6 +28,18 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
         <div>
           <header>
             <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
+              {images && images.length > 0 && (
+                <div className="mb-4">
+                  <Image
+                    src={images[0]}
+                    alt={title}
+                    layout="responsive"
+                    width={1200}
+                    height={900}
+                    className="rounded-lg"
+                  />
+                </div>
+              )}
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>

@@ -5,7 +5,7 @@ import Comments from '@/components/Comments'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
-import Image from '@/components/Image'
+import Image from 'next/image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
@@ -37,10 +37,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
     date,
     title,
     tags,
+    images,
     ig,
     bsky,
     threads,
-    x, // Change this line from 'twitter' to 'x'
+    x,
     fb,
     reddit,
     pinterest,
@@ -56,6 +57,18 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
+              {images && images.length > 0 && (
+                <div className="mb-4">
+                  <Image
+                    src={images[0]}
+                    alt={title}
+                    layout="responsive"
+                    width={1200}
+                    height={900}
+                    className="rounded-lg"
+                  />
+                </div>
+              )}
               <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Published on</dt>
