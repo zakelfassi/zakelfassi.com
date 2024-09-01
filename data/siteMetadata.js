@@ -1,9 +1,10 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Ideas and learnings code x design x philosophy',
+  title: 'Zak El Fassi | Exploring the Digital Frontiers of Reality',
   author: 'Zak El Fassi',
   headerTitle: 'zakelfassi.com',
-  description: 'Ideas and learnings code x design x philosophy',
+  description:
+    'Exploring the frontiers where code meets consciousness. Insights on tech, philosophy, and the nature of information.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://zakelfassi.com',
