@@ -13,6 +13,7 @@ export default function Comments({
   reddit,
   pinterest,
   linkedin,
+  youtubeId,
 }: {
   slug: string
   ig?: string
@@ -23,12 +24,13 @@ export default function Comments({
   reddit?: string
   pinterest?: string
   linkedin?: string
+  youtubeId?: string
 }) {
   const [loadComments, setLoadComments] = useState(false)
   return (
     <>
       {/* Share and Comment Section */}
-      {(ig || threads || x || fb || reddit || pinterest || bsky || linkedin) && (
+      {(ig || threads || x || fb || reddit || pinterest || bsky || linkedin || youtubeId) && (
         <div className="flex flex-row items-center justify-center space-x-8">
           <h2 className="text-2xl font-bold leading-8 tracking-tight">Share and Comment on</h2>
           {ig && <SocialIcon kind="instagram" href={ig} size={6} />}
@@ -39,6 +41,13 @@ export default function Comments({
           {reddit && <SocialIcon kind="reddit" href={reddit} size={6} />}
           {pinterest && <SocialIcon kind="pinterest" href={pinterest} size={6} />}
           {linkedin && <SocialIcon kind="linkedin" href={linkedin} size={6} />}
+          {youtubeId && (
+            <SocialIcon
+              kind="youtube"
+              href={`https://www.youtube.com/watch?v=${youtubeId}`}
+              size={6}
+            />
+          )}
         </div>
       )}
     </>

@@ -45,6 +45,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
     reddit,
     pinterest,
     linkedin,
+    youtubeId,
   } = content
   const basePath = path.split('/')[0]
 
@@ -120,6 +121,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     threads={threads}
                     bsky={bsky}
                     linkedin={linkedin}
+                    youtubeId={youtubeId}
                   />
                 </div>
               )}
