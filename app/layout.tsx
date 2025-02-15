@@ -57,6 +57,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: [siteMetadata.socialBanner],
   },
+  other: {
+    link: ['me=https://hachyderm.io/@zakelfassi'],
+    meta: [
+      {
+        name: 'fediverse:creator',
+        content: '@zakelfassi@hachyderm.io',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
